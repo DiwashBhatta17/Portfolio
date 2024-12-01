@@ -9,7 +9,7 @@ export default function About() {
       <p className="text-gray-600 dark:text-[#e4d9d9]">
         I am a proactive and adaptable professional with a passion for
         technology and a talent for quickly mastering new techniques. With a
-        strong foundation in [your field/industry], I am dedicated to staying
+        strong foundation in advanced technology, I am dedicated to staying
         ahead of trends and continuously honing my skills. Whether collaborating
         with teams or tackling individual projects, I am committed to delivering
         innovative solutions that exceed expectations. My approach combines
