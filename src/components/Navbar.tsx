@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem('theme') === 'dark'
   );
+  const navigate = useNavigate();
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -22,23 +24,23 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-gray-900 text-white z-50 shadow-lg">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-xl font-bold">Portfolio</div>
+        <a href='#home' onClick={()=>navigate('/')} className="text-xl font-bold">Portfolio</a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="hover:text-gray-300">
+          <a onClick={()=>navigate('/')} href="#home" className="hover:text-gray-300">
             Home
           </a>
-          <a href="#projects" className="hover:text-gray-300">
+          <a onClick={()=>navigate('/')}  href="#projects" className="hover:text-gray-300">
             Projects
           </a>
-          <a href="#experience" className="hover:text-gray-300">
+          <a onClick={()=>navigate('/')}  href="#experience" className="hover:text-gray-300">
             Experience
           </a>
-          <a href="#blog" className="hover:text-gray-300">
+          <Link  to='/blogs' className="hover:text-gray-300">
             Blog
-          </a>
-          <a href="#contact" className="hover:text-gray-300">
+          </Link>
+          <a onClick={()=>navigate('/')}  href="#contact" className="hover:text-gray-300">
             Contact
           </a>
         </div>
