@@ -43,10 +43,10 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Dark Mode Toggle */}
+        {/* Dark Mode Toggle (Visible for both Desktop and Mobile) */}
         <button
           onClick={toggleDarkMode}
-          className="hidden md:block px-4 py-2 bg-gray-800 rounded text-sm hover:bg-gray-700 focus:ring focus:ring-gray-600"
+          className="px-4 py-2 bg-gray-800 rounded text-sm hover:bg-gray-700 focus:ring focus:ring-gray-600"
           aria-label="Toggle Dark Mode"
         >
           {isDarkMode ? 'Light Mode' : 'Dark Mode'}
@@ -102,7 +102,6 @@ const Navbar = () => {
           </a>
         </div>
       )}
-      
     </nav>
   );
 };
