@@ -32,11 +32,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 mt-5 pt-5 bg-white dark:bg-gray-800">
+    <section id="contact" className="pt-20 mt-8 py-16 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold dark:text-white mb-12">Get In Touch</h2>
+      <h2 className="text-3xl font-bold text-center text-[#463f3f] dark:text-white mb-8">
+          Feel free to message</h2>
         <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} id="form" className="space-y-6">
+          <form onSubmit={handleSubmit} id="form" className="space-y-5">
             {/* Email Field */}
            
 

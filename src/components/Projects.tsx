@@ -62,9 +62,9 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="mb-16">
+    <section className="mt-16">
       <h2 className="text-2xl font-bold dark:text-white text-gray-900 mb-6">Featured Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {projects.map((project) => (
           <div key={project.title} className="bg-white dark:bg-[#0c030c] p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold dark:text-white text-gray-900">{project.title}</h3>

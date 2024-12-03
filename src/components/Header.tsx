@@ -4,7 +4,7 @@ import image1 from '../components/images/diwash2.jpg'
 
 export default function Header() {
   return (
-    <header className="bg-white dark:bg-[#0c030c] dark:text-white shadow-sm">
+    <header className="bg-white my-10  dark:bg-[#0c030c] dark:text-white shadow-sm">
       <div className="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <img 

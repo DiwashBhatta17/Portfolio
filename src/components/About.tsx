@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <section className="mb-16">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-[#f4f2f2] mb-4 dark:">
+      <h2 className="text-2xl font-bold mt-3  text-gray-900 dark:text-[#f4f2f2] mb-4 dark:">
         About Me
       </h2>
       <p className="text-gray-600 dark:text-[#e4d9d9]">

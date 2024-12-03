@@ -20,10 +20,18 @@ function App() {
           <Navbar />
 
           {/* Main Content */}
-          <main className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+          <main className="max-w-6xl mx-auto px-4 pt-12 sm:px-7 lg:px-8">
             <Routes>
               {/* Blog Pages */}
               <Route path="/blogs" element={<ForBlog />} />
+              <Route path="/skills" element={<Skills/>} />
+              <Route path="/projects" element={<Projects/>} />
+              <Route path="/experience" element={<Experience/>} />
+              <Route path="/education" element={<Education/>} />
+              <Route path="/interests" element={<Interests/>} />
+              <Route path="/contact" element={<Contact/>} />
+
+
 
               {/* Main Page */}
               <Route
@@ -36,16 +44,16 @@ function App() {
                     <section id="about">
                       <About />
                     </section>
-                    <section id="skills">
+                    {/* <section id="skills">
                       <Skills />
-                    </section>
-                    <section id="experience">
+                    </section> */}
+                    {/* <section id="experience">
                       <Experience />
-                    </section>
-                    <section id="projects">
+                    </section> */}
+                    {/* <section id="projects">
                       <Projects />
-                    </section>
-                    <section id="education">
+                    </section> */}
+                    {/* <section id="education">
                       <Education />
                     </section>
                     <section id="interests">
@@ -53,7 +61,7 @@ function App() {
                     </section>
                     <section id="contact">
                       <Contact />
-                    </section>
+                    </section> */}
                   </>
                 }
               />

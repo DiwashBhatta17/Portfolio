@@ -1,2 +1,2 @@
-const BASE_URL = "http://localhost:5000/api/posts"
+const BASE_URL = "https://blog-backend-gu1p.onrender.com/api/posts"
 export default BASE_URL;

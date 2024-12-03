@@ -20,29 +20,35 @@ const Navbar = () => {
     }
   };
 
+  function handleNavigate(){
+    setIsMenuOpen(false);
+    window.scrollTo(0, 0);
+    navigate('/');
+  }
+
   return (
     <nav className="fixed top-0 w-full bg-gray-900 text-white z-50 shadow-lg">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href='#home' onClick={()=>navigate('/')} className="text-xl font-bold">Portfolio</a>
+        <Link to='/' onClick={()=>window.scrollTo(0, 0)} className="text-xl font-bold">Portfolio</Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <a onClick={()=>navigate('/')} href="#home" className="hover:text-gray-300">
+        <Link onClick={()=>window.scrollTo(0, 0)}  to='/' className="hover:text-gray-300">
             Home
-          </a>
-          <a onClick={()=>navigate('/')}  href="#projects" className="hover:text-gray-300">
+          </Link>
+          <Link onClick={()=>window.scrollTo(0, 0)}  to='/projects' className="hover:text-gray-300">
             Projects
-          </a>
-          <a onClick={()=>navigate('/')}  href="#experience" className="hover:text-gray-300">
+          </Link>
+          <Link onClick={()=>window.scrollTo(0, 0)}  to='/experience' className="hover:text-gray-300">
             Experience
-          </a>
-          <Link  to='/blogs' className="hover:text-gray-300">
+          </Link>
+          <Link onClick={()=>window.scrollTo(0, 0)}  to='/blogs' className="hover:text-gray-300">
             Blog
           </Link>
-          <a onClick={()=>navigate('/')}  href="#contact" className="hover:text-gray-300">
+          <Link onClick={()=>window.scrollTo(0, 0)}  to='/contact' className="hover:text-gray-300">
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Dark Mode Toggle (Visible for both Desktop and Mobile) */}
@@ -67,41 +73,43 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800">
-          <a
-            href="#home"
+         <Link to='/'
             className="block px-6 py-2 text-gray-300 hover:bg-gray-700"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => handleNavigate()}
           >
             Home
-          </a>
-          <a
-            href="#projects"
+          </Link>
+          <Link to='/projects'
             className="block px-6 py-2 text-gray-300 hover:bg-gray-700"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => handleNavigate()}
           >
             Projects
-          </a>
-          <a
-            href="#experience"
+          </Link>
+          <Link to='/experience'
             className="block px-6 py-2 text-gray-300 hover:bg-gray-700"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => handleNavigate()}
           >
             Experience
-          </a>
-          <a
-            href="#blog"
+          </Link>
+
+          <Link to='/skills'
             className="block px-6 py-2 text-gray-300 hover:bg-gray-700"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => handleNavigate()}
+          >
+            Skills
+          </Link>
+          <Link to='/blogs'
+            className="block px-6 py-2 text-gray-300 hover:bg-gray-700"
+            onClick={() => handleNavigate()}
           >
             Blog
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link to='/contact'
             className="block px-6 py-2 text-gray-300 hover:bg-gray-700"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => handleNavigate()}
           >
-            Contact
-          </a>
+            Contacts
+          </Link>
         </div>
       )}
     </nav>
